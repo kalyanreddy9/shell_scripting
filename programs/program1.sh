@@ -4,27 +4,27 @@
 
 # Declaring Variables
 name="kalyan"
-echo "Hello , $name"
+echo "Hello , $name" # prints Hello , kalyan
 
 # Integer Variable: 
 age=25
-echo "Age: $age years"
+echo "Age: $age years" # prints Age: 25 years
 
 # Arithmetic Operations
 x=5
 y=10
-sum=$(($x+$y))
-echo "$sum"
+sum=$(($x+$y)) 
+echo "$sum" # prints 15
 
 # Concatenation:
 greeting="Hello"
 subject="kalyan"
-echo "$greeting $subject how are you!"
+echo "$greeting $subject how are you!" # prints Hello kalyan how are you!
 
 # String Length:
 string="Shell scripting"
 length=${#string}
-echo "$string is $length characters"
+echo "$string is $length characters" # prints Shell scripting is 15 characters
 
 # Substring Extraction
 substring=${string:0:5} #Extracts first five characters
@@ -46,7 +46,7 @@ formatted_date=$(date +"%Y-%m-%d %H:%M:%S")
 echo "Formatted date is: $formatted_date"
 # Using date command with custom format
 custom_date=$(date +"%d-%m-%Y")
-echo "Custom date is: $custom_date"
+echo "Custom date is: $custom_date" #prints Custom date is: 01-07-2025
 
 # Readonly Variables
 readonly dhoni_jersey_number=7
