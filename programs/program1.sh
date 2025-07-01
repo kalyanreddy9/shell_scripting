@@ -7,8 +7,8 @@ name="kalyan"
 echo "Hello , $name" # prints Hello , kalyan
 
 # Integer Variable: 
-age=25
-echo "Age: $age years" # prints Age: 25 years
+age=22
+echo "Age: $age years" # prints Age: 22 years
 
 # Arithmetic Operations
 x=5
