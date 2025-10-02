@@ -7,3 +7,5 @@
 - **program_5.sh** - Demonstrates Bash functions, passing arguments, capturing output using command substitution, and using return status for success/failure checks.
 - **program_6.sh** - Covers string manipulation including concatenation, substring extraction, and search/replace with parameter expansion.
 - **program_7.sh** - Introduces arrays: declaration, indexing, looping, and basic manipulation such as adding, updating, and removing elements.
+- **program_8.sh** → Demonstrates handling command-line arguments (`$0`, `$1`, `$@`, `$*`, `$#`) in shell scripts.  
+- **program_9.sh** → Shows error handling with exit codes, custom error messages, and using `trap` with cleanup on `Ctrl+C`.  
