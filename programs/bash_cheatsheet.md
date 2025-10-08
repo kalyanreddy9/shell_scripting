@@ -187,10 +187,10 @@
 | `>`     | Redirect stdout                         | `echo hi > file.txt`                                | write to file                    |           |                             |       |                           |
 | `>>`    | Append stdout                           | `echo hi >> file.txt`                               | append to file                   |           |                             |       |                           |
 | `<`     | Redirect stdin                          | `cat < file.txt`                                    | read from file                   |           |                             |       |                           |
-| `       | `                                       | Pipe                                                | `ls                              | grep txt` | pass stdout to next command |       |                           |
+| `       \| `                                       | Pipe                                                | `ls                              \| grep txt` | pass stdout to next command |       |                           |
 | `&`     | Background process                      | `sleep 5 &`                                         | run in background                |           |                             |       |                           |
 | `&&`    | Logical AND                             | `cmd1 && cmd2`                                      | run second if first succeeds     |           |                             |       |                           |
-| `       |                                         | `                                                   | Logical OR                       | `cmd1     |                             | cmd2` | run second if first fails |
+| `\|`    | Logical OR                              | `cmd1 \| cmd2` | run second if first fails |
 | `!`     | Logical NOT                             | `! true`                                            | returns 1 (false)                |           |                             |       |                           |
 | `~`     | Home directory                          | `cd ~`                                              | switches to home dir             |           |                             |       |                           |
 | `\`     | Escape character                        | `echo "Hello\$"`                                    | prints `Hello$`                  |           |                             |       |                           |
@@ -204,6 +204,44 @@
 | `%%`    | Longest suffix removal                  | `${var%%pattern}`                                   | remove longest suffix            |           |                             |       |                           |
 | `#`     | Prefix removal                          | `${var#pattern}`                                    | remove shortest prefix           |           |                             |       |                           |
 | `##`    | Longest prefix removal                  | `${var##pattern}`                                   | remove longest prefix            |           |                             |       |                           |
+
+
+## grep — Search for patterns in text
+
+| Command                  | Description                     | Example                            | Output                    |   |
+| ------------------------ | ------------------------------- | ---------------------------------- | ------------------------- | - |
+| `grep "error" file`      | Print lines containing `error`  | `grep "error" log.txt`             | Show only error lines     |   |
+| `grep -i "error" file`   | Case-insensitive search         | Matches `error`, `Error`, etc.     |                           |   |
+| `grep -v "error" file`   | Invert match (exclude)          | Exclude lines with `error`         |                           |   |
+| `grep -n "error" file`   | Show line numbers               | `12:error found`                   |                           |   |
+| `grep -r "pattern" dir/` | Recursive search in a directory |                                    |                           |   |
+| `grep -E "error\|fail"` | Extended regex (multiple patterns) | Matches `error` or `fail` |
+
+
+
+## sed — Stream editor for find/replace & line edits
+
+| Command                        | Description                               | Example | Output |
+| ------------------------------ | ----------------------------------------- | ------- | ------ |
+| `sed 's/error/fix/' file`      | Replace first `error` with `fix` per line |         |        |
+| `sed 's/error/fix/g' file`     | Replace all occurrences per line          |         |        |
+| `sed -i 's/error/fix/g' file`  | Replace in the actual file                |         |        |
+| `sed '/error/d' file`          | Delete lines containing `error`           |         |        |
+| `sed -n '2p' file`             | Print only line 2                         |         |        |
+| `sed '2 i\Inserted line' file` | Insert before line 2                      |         |        |
+| `sed '2 a\Appended line' file` | Append after line 2                       |         |        |
+| `sed '2 c\New line' file`      | Replace line 2 completely                 |         |        |
+
+awk — Pattern scanning and processing
+
+| Command                                 | Description              | Example                            | Output |
+| --------------------------------------- | ------------------------ | ---------------------------------- | ------ |
+| `awk '{print $1}' file`                 | Print first column       |                                    |        |
+| `awk '/error/' file`                    | Print lines with `error` |                                    |        |
+| `awk '{print NR, $0}' file`             | Show line numbers        | `1 line1`, `2 line2`               |        |
+| `awk -F ":" '{print $1}' file`          | Use `:` as delimiter     | Print first field before `:`       |        |
+| `awk '{sum+=$2} END {print sum}' file`  | Sum of 2nd column        |                                    |        |
+| `awk '{if ($3 > 50) print $1,$3}' file` | Conditional printing     | Print only rows where 3rd col > 50 |        |
 
 ---
 

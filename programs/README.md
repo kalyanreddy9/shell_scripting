@@ -9,3 +9,8 @@
 - **program_7.sh** - Introduces arrays: declaration, indexing, looping, and basic manipulation such as adding, updating, and removing elements.
 - **program_8.sh** → Demonstrates handling command-line arguments (`$0`, `$1`, `$@`, `$*`, `$#`) in shell scripts.  
 - **program_9.sh** → Shows error handling with exit codes, custom error messages, and using `trap` with cleanup on `Ctrl+C`.  
+- **program_10.sh** – Demonstrates text processing commands like `grep` for searching patterns and `sed` for text substitution, deletion, and line insertion with examples.  
+- **program_11.sh** – TODO- Introduces regular expressions (regex) in shell scripting and shows how tools like `grep`, `sed`, and `awk` use them for advanced text matching and transformations.  
+- **program_12.sh** – Explains pipelines and redirection using operators like `|`, `<`, `>`, and `>>` to control input/output between commands and files.  
+- **program_13.sh** – Covers shell script debugging with `set -x` for tracing execution and `set -e` for stopping scripts on errors, along with examples and output.  
+- **program_14.sh** – TODO-Explains subshells and process control with examples of running commands in isolated environments using parentheses `()` and temporary variable scopes.  

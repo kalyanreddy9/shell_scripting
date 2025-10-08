@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Regular Expressions
-
-# Regular expressions are used in various Unix command-line tools like grep, sed, and awk 
-# to perform pattern matching and text transformations.
-
 # grep is a command-line tool used to search for specific patterns in text files. 
 
 grep "ls " program_9.sh # ls /non-existent-directory # ls: cannot access '/non-existent-directory': No such file or directory
@@ -63,4 +58,12 @@ sed -n '3,4p' text_1.txt
 
 # TEXT → the text you want to insert.
 
-sed '2 i\error - line 2a'
+sed '2 i\error - line 2a' text_1.txt
+
+# Quick memory trick:
+
+# i → insert before
+
+# a → append after
+
+# c → change (replace line)
