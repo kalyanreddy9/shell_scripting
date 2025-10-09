@@ -13,4 +13,5 @@
 - **program_11.sh** – TODO- Introduces regular expressions (regex) in shell scripting and shows how tools like `grep`, `sed`, and `awk` use them for advanced text matching and transformations.  
 - **program_12.sh** – Explains pipelines and redirection using operators like `|`, `<`, `>`, and `>>` to control input/output between commands and files.  
 - **program_13.sh** – Covers shell script debugging with `set -x` for tracing execution and `set -e` for stopping scripts on errors, along with examples and output.  
-- **program_14.sh** – TODO-Explains subshells and process control with examples of running commands in isolated environments using parentheses `()` and temporary variable scopes.  
+- **program_14.sh** – Demonstrates subshells, background & foreground processes, process control using `&` and `wait`, and redirecting outputs to log files when running multiple jobs concurrently.  
+- **program_15.sh** – Covers environment variables, temporary & permanent PATH changes, and sourcing configuration files to persist variables and functions in the current shell session.
